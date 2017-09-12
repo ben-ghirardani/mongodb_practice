@@ -11,8 +11,8 @@ MongoClient.connect('mongodb://localhost:27017/farm', function(err, database){
 
 
 // animals INDEX
-// GET animals from DB.
-// Send back to client.
+// GET animals from DB
+// Send back to client
 animalsRouter.get('/', function(req, res){    
     db.collection('animals').find().toArray(function(err, results){
         res.json(results);
